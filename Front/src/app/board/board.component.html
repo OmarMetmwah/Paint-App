@@ -1,0 +1,39 @@
+<div class="tool-box">
+  <div class="color-plate" tooltip="&nbsp;Color Plate&nbsp;" title="Stroke Color">
+    <input type="color" (input)='stroke=$any($event.target).value' id='color'>
+  </div>
+  <button class="selected" [ngClass]="{'selected': tool === 'brush'}"
+    (click)="tool='brush';shapeType='line';mode='source-over'" tooltip="&nbsp;Brush&nbsp;"><img
+      src="../../assets/brush.ico"></button>
+  <button [ngClass]="{'selected': tool === 'eraser'}" (click)="tool='eraser';shapeType='line';mode='destination-out'"
+    tooltip="&nbsp;Eraser&nbsp;"><img src="../../assets/eraser.ico"></button>
+  <button [ngClass]="{'selected': tool === 'move'}" (click)="tool='move'" tooltip="&nbsp;Move&nbsp;"><img
+      src="../../assets/move.jpg"></button>
+  <button [ngClass]="{'selected': shapeType !== 'strline'&& tool==='shapes' }" (click)="tool='shapes'"
+    style="background-color: transparent;"><img src="../../assets/ll.png"></button>
+  <div class="color-plate c2" title="Fill Color">
+    <input type="color" (input)='fill=$any($event.target).value' id='color'>
+  </div>
+  <button [ngClass]="{'selected': tool === 'del'}" (click)="tool='del'" tooltip="&nbsp;Delete&nbsp;"><img
+      src="../../assets/clear.png"></button>
+  <button [ngClass]="{'selected': tool === 'resize'}" (click)="tool='resize'" tooltip="&nbsp;Resize&nbsp;"><img
+      src="../../assets/resize.png"></button>
+  <button [ngClass]="{'selected': shapeType === 'strline'&& tool==='shapes' }"
+    (click)="shapeType='strline';tool='shapes';mode='source-over'" tooltip="&nbsp;Straight Line&nbsp;"><img
+      src="../../assets/line.png"></button>
+
+  <button [ngClass]="{'selected': tool === 'dublicate'}" (click)="tool='dublicate'" tooltip="&nbsp;Dublicate&nbsp;"><img
+      src="../../assets/duplicate.png"></button>
+</div>
+<input type="range" (input)='strokeWidth=$any($event.target).value' id="slider" title="Stroke Width" step="3">
+<button (click)="undo()" id="undo" title="Undo" style="position: fixed; top:0px; left:700px"><img
+    src="../../assets/undo.png"></button>
+<button (click)="redo()" title="Redo" style="position: fixed; top:0px; left:750px"><img
+    src="../../assets/redo.png"></button>
+<button class="download" (click)="download()" title="Download" style="position: fixed; top:0px; left:800px"><img
+    src="../../assets/download.png" alt=""><a download></a></button>
+<button class="upload" (click)="upload()" title="Upload" style="position: fixed; top:0px; left:850px"><img
+    src="../../assets/upload.png" alt=""><a download></a></button>
+<input id="path" type="file" style="visibility: hidden;">
+
+<input type="file" (change)="selectFile($event)" style="position: fixed; top:20px; left:900px" />

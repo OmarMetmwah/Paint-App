@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.color-plate {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  overflow: hidden;
+  border: 0;
+  vertical-align: middle;
+}
+
+#color {
+  border: 0;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: -5px;
+  top: -5px;
+  box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+}
+
+.tool-box {
+  position: fixed;
+  left: -0.15rem;
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0 28px 28px 0;
+  z-index: 1;
+  font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: normal;
+  box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+  top: 40px;
+}
+
+button {
+  margin: 10px 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-radius: 50%;
+  border: 0;
+  box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+  cursor: pointer;
+}
+
+img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+*[tooltip] {
+  position: relative;
+}
+
+*[tooltip]:hover:before {
+  content: attr(tooltip);
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  top: 1em;
+  position: absolute;
+  left: 60px;
+  font: 50px;
+  white-space: nowrap;
+}
+
+.selected {
+  border: 2px solid #673ab7;
+}
+
+#slider{
+  position: fixed;
+  width: 660px;
+}

@@ -1,0 +1,33 @@
+<div id="container" style="position: absolute; z-index: -1;"></div>
+<board id="board" [shapeType]="shapeT" [tool]="this.toolT"></board>
+<div class="cont">
+  <ul id="menu">
+    <a class="menu-button icon-plus" (click)="toolT='shapes'" href="#menu" title="Shapes" style="background: none;">
+      <img style="background: none;" class="shapes" src="../assets/shapes.png">
+    </a>
+    <a class="menu-button icon-minus" href="#0" (click)="toolT='shapes'" title="Hide navigation"
+      style="background: none;">
+      <img style="background: none;" class="shapes" src="../assets/shapes.png">
+    </a>
+    <li class="menu-item">
+      <a href="#0" title="Triangle" (click)="shapeT='tri'">
+        <img src="../assets/triangle.png">
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="#0" title="Rectangle" (click)="shapeT='rect'">
+        <img src="../assets/rectangle.png">
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="#0" title="Circle" (click)="shapeT='cir'">
+        <img src="../assets/circle.png">
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="#0" title="Square" (click)="shapeT='squ'">
+        <img src="../assets/square.png">
+      </a>
+    </li>
+  </ul>
+</div>

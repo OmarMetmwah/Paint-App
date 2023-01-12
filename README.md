@@ -5,7 +5,7 @@
 It’s required to design web paint program with implementing the concept of inheritance and polymorphism and applying 2 design patterns using Angular and Spring Boot.
 
 ## Preview:
-!['https://youtu.be/1-_4xMdzGGw'](https://youtu.be/1-_4xMdzGGw)
+[https://youtu.be/1-_4xMdzGGw](https://youtu.be/1-_4xMdzGGw)
 
 ## Features available in the program:
 
